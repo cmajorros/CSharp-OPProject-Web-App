@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="OP.master.cs" Inherits="OPProject.OP" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style2
+        {
+            background-color: #FFFFFF;
+        }
+        .style3
+        {
+            width: 64px;
+            height: 66px;
+        }
+        .style4
+        {
+            text-align: left;
+            background-color: #FFFFFF;
+        }
+        .style5
+        {
+            text-align: left;
+            width: 916px;
+            background-color: #FFFFFF;
+        }
+        .style6
+        {
+            color: #333333;
+        }
+        .style7
+        {
+            height: 36px;
+            background-color: #3399FF;
+        }
+        .style8
+        {
+            width: 1100px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table cellpadding="0" cellspacing="0" class="page">
+        <tr>
+            <td class="style5" valign="middle">
+                <img alt="" class="style3" src="../PnuchLOgo.jpg" />&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label1" runat="server" Font-Size="X-Large" Text="Welcome ! "></asp:Label>
+&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label2" runat="server" Font-Size="Medium" ForeColor="#3399FF" 
+                    Text="UserName"></asp:Label>
+            </td>
+            <td class="style4" valign="bottom">
+&nbsp;
+                <asp:LinkButton ID="LinkButton1" runat="server" CssClass="style6" 
+                    Font-Size="Medium" ForeColor="#333333" onclick="LinkButton1_Click">Staff Log in</asp:LinkButton>
+&nbsp;&nbsp;
+                <asp:LinkButton ID="LinkButton2" runat="server" CssClass="style6" 
+                    Font-Size="Medium" ForeColor="#333333">Log Out </asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td class="style2" colspan="2">
+                <img alt="" class="style8" src="../OPbanner.jpg" /></td>
+        </tr>
+        <tr>
+            <td class="style7" colspan="2">
+                <asp:Menu ID="Menu1" runat="server" CssClass="menu" IncludeStyleBlock="False" 
+                    Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem Text=" Home  " Value="Home"></asp:MenuItem>
+                        <asp:MenuItem Text="About Us " Value="About Us">
+                            <asp:MenuItem Text="Contact us" Value="Contact us"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </td>
+        </tr>
+        <tr>
+            <td class="style2" colspan="2">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td class="style2" colspan="2">
+                &nbsp;</td>
+        </tr>
+    </table>
+    </form>
+    </body>
+</html>
